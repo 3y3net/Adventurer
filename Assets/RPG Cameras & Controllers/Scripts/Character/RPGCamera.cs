@@ -449,10 +449,7 @@ namespace JohnStairs.RCC.Character {
         }
 
         protected virtual void LateUpdate() {
-
-            if (SceneManager.instance.gameMode != SceneManager.GameMode.Locomotion)
-                return;
-
+            
             GetInputs();
 
             HandleCursor();

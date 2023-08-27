@@ -5,6 +5,10 @@ namespace JohnStairs.RCC.Character.ARPG {
     public class RPGCameraARPG : RPGCamera {
 
         protected override void LateUpdate() {
+
+            if (SceneManager.instance.gameMode != SceneManager.GameMode.Locomotion)
+                return;
+
             base.LateUpdate();            
 
             // Check if the camera's Y rotation is contrained by terrain

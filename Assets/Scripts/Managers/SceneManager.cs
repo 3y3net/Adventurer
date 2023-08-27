@@ -17,8 +17,8 @@ public class SceneManager : MonoBehaviour
                 {
                     GameObject managers = GameObject.Find("/GameManagers");
                     if (managers == null)
-                        managers = new GameObject("GameManagers");
-                    _instance = (new GameObject("GameManager")).AddComponent<SceneManager>();
+                        managers = new GameObject("SceneManager");
+                    _instance = (new GameObject("SceneManager")).AddComponent<SceneManager>();
                     _instance.transform.parent = managers.transform;
                 }
             }
@@ -34,16 +34,50 @@ public class SceneManager : MonoBehaviour
         Menu
 	}
 
+    public enum GameCursor
+    {
+        ModeNormal,
+        ModeInfo,
+        ModeAction,
+        ModeGrab,
+        ModeFork
+    }
+
     public GameMode gameMode;
+    public GameCursor currentGameCursor = GameCursor.ModeNormal;
+    public GameObject player;
+
+	private void Start()
+	{
+        HideCursor();
+	}
 
 	private void Update()
 	{
         if(Input.GetKeyDown(KeyCode.T)) {
             if (gameMode == GameMode.Locomotion)
+            {
                 gameMode = GameMode.ZoomArea;
+                ShowCursor();
+            }
             else
+            {
                 gameMode = GameMode.Locomotion;
+                HideCursor();
+            }
 		}
 
+    }
+
+    public void ShowCursor()
+    {
+        Cursor.visible = true;        
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void HideCursor()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
