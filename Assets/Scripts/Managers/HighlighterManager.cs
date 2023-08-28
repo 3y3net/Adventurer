@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
+
 public class HighlighterManager : MonoBehaviour
 {
     private static HighlighterManager _instance = null;
@@ -28,16 +28,23 @@ public class HighlighterManager : MonoBehaviour
 
     // Which layers targeting ray must hit (-1 = everything)
     public LayerMask targetingLayerMask = -1;
+    public float zoomSpeed=10;
 
     // Targeting ray length
     private float targetingRayLength = Mathf.Infinity;
 
     // Camera component reference
-    public Camera camera;
-    private HighlightObject lastHc;
+    public Camera usedCamera;
+    private HighlightObject lastHo;
 
     private bool clickStarted = false;
     private HighlightObject hcClicked = null;
+
+    private HighlightGroup current, lastDiscarded;
+    private Stack groupStack = new Stack();
+
+    private Vector3 zoomPosition;
+    private Quaternion zoomRotation;
 
     public void AddLayer(string layerName)
     {
@@ -53,32 +60,82 @@ public class HighlighterManager : MonoBehaviour
     // 
     void Awake()
     {
-        camera = Camera.main;
-        lastHc = null;
+        if(usedCamera==null)
+            usedCamera = Camera.main;
+        lastHo = null;
     }
 
     // 
     void Update()
     {
-        TargetingRaycast();
+        //If we are at locomotion mode look for highloighGroups
+        if (SceneManager.instance.gameMode == SceneManager.GameMode.Locomotion)
+        {
+            if (Input.GetButtonDown("Action")) {
+
+                Debug.Log(groupStack.Count);
+                //If there is a group in the stack
+                if (groupStack.Count>0)
+                {
+                    HighlightGroup hg = (HighlightGroup)groupStack.Peek();
+                    zoomPosition = current.CameraPosition.position;
+                    zoomRotation = current.CameraPosition.rotation;
+                    SceneManager.instance.SetGameMode(SceneManager.GameMode.ZoomArea);
+
+                    hg.GroupActivated();
+                }                
+            }
+        }
+        //If we are at zoom mode look for highlighObjects
+        if (SceneManager.instance.gameMode == SceneManager.GameMode.ZoomArea)
+        {
+
+            usedCamera.transform.rotation = Quaternion.Slerp(usedCamera.transform.rotation, zoomRotation, Time.deltaTime * zoomSpeed);
+            usedCamera.transform.position = Vector3.Slerp(usedCamera.transform.position, zoomPosition, Time.deltaTime * zoomSpeed);
+
+            if (Input.GetButtonUp("Fire2")) {
+
+                if(current!=null)
+                    current.GroupDeActivated();
+                //If we are in a nested artificial group
+                //POP current and leave next at top
+                if (groupStack.Count > 1)
+                {
+                    lastDiscarded = (HighlightGroup)groupStack.Pop();
+                    current = (HighlightGroup)groupStack.Peek();
+                }
+                else
+                    SceneManager.instance.SetGameMode(SceneManager.GameMode.Locomotion);
+            }
+
+            LookForHighlighObjects();
+        }
+
+    }
+
+    public void SetCurrentGroup(HighlightGroup grp)
+    {
+        current = grp;
+        if (grp != null)
+            groupStack.Push(grp);
+        else if(groupStack.Count>0)
+            lastDiscarded=(HighlightGroup)groupStack.Pop();
     }
 
     // 
-    public void TargetingRaycast()
+    public void LookForHighlighObjects()
     {
         // Current target object transform component
         Transform targetTransform = null;
         float distance = 1000000f;
 
-        //Debug.Log("BUSCANDO");
-
         // If camera component is available
-        if (camera != null)
+        if (usedCamera != null)
         {
             //Debug.Log("CAM NO NULL");
             RaycastHit hitInfo;
             // Create a ray from mouse coords
-            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+            Ray ray = usedCamera.ScreenPointToRay(Input.mousePosition);
 
             // Targeting raycast
             if (Physics.Raycast(ray, out hitInfo, targetingRayLength, targetingLayerMask.value))
@@ -96,16 +153,20 @@ public class HighlighterManager : MonoBehaviour
             HighlightObject hc = targetTransform.GetComponentInParent<HighlightObject>();
             if (hc != null)
             {
-                Debug.Log("CAM HIT " + targetTransform.gameObject.name);
-                if (lastHc != null && lastHc != hc)
+                //Debug.Log("CAM HIT " + targetTransform.gameObject.name);
+                //Only highlight objects of current group
+                if (!current.objToHighlight.Contains(hc.gameObject) && current.exclusiveFocus)
+                    return;
+
+                if (lastHo != null && lastHo != hc)
                 {
-                    lastHc.MouseExit(0f);
-                    lastHc = hc;
+                    lastHo.MouseExit(0f);
+                    lastHo = hc;
                 }
-                if (lastHc == null || lastHc != hc)
+                if (lastHo == null || lastHo != hc)
                 {
                     hc.MouseEnter(distance);
-                    lastHc = hc;
+                    lastHo = hc;                   
                 }
                 //Debug.Log("CAM HIT " + targetTransform.gameObject.name+" tiene HC a "+ distance);
                 if (Input.GetButtonDown("Fire1")) { clickStarted = true; hcClicked = hc; }
@@ -128,16 +189,22 @@ public class HighlighterManager : MonoBehaviour
                 }
                 hc.MouseOver(distance);
             }
-            else if (lastHc != null)
+            else if (lastHo != null)
             {
-                lastHc.MouseExit(0f);
-                lastHc = null;
+                lastHo.MouseExit(0f);
+                lastHo = null;
+            }
+
+            HighlightGroup hg = targetTransform.GetComponentInParent<HighlightGroup>();
+            if(hg!=null)
+            {
+
             }
         }
-        else if (lastHc != null)
+        else if (lastHo != null)
         {
-            lastHc.MouseExit(0f);
-            lastHc = null;
+            lastHo.MouseExit(0f);
+            lastHo = null;
         }
     }
 }

@@ -16,8 +16,9 @@ public class HighlightObject : MonoBehaviour
     public bool outlined = true;                //Set true for display outlined text
     public Color outlineColor = Color.black;    //Outline text color
     public Font textFont = null;                //Text font
-    public int fontSize = 12;					//Text size
+    public int fontSize = 52;					//Text size
     public string labelToDisplay;
+    public Vector2 labelDelta = new Vector2(149, 20);
     public SceneManager.GameCursor cursor;      //Cursor to show
 
     public bool isActive = true;
@@ -29,9 +30,12 @@ public class HighlightObject : MonoBehaviour
 
     public enum OnClickAction { None, ShowInfo, ShowInfoAndExit, Inspect, CallFunction}
 
+    public OnClickAction clickAction, exitAction;
+    public int infoId, exitId;
+
     protected void Awake()
     {
-        Camera cm= HighlighterManager.instance.camera;
+        Camera cm= HighlighterManager.instance.usedCamera;
         h = GetComponent<Highlighter>();
         if (h == null) { h = gameObject.AddComponent<Highlighter>(); }
     }
@@ -73,16 +77,13 @@ public class HighlightObject : MonoBehaviour
             showLabel = true;
         else
             showLabel = false;
-        int a;
-        if (distance <= actionlDistance)
-            a = 0;
-        else
-            a = 1;
+        if (distance <= actionlDistance) { }
+        
     }
     
     public void MouseEnter(float distance)
 	{
-        Debug.Log("Enter");
+        Debug.Log("Enter "+distance);
 	}
 
     public void MouseExit(float distance)
@@ -94,12 +95,12 @@ public class HighlightObject : MonoBehaviour
 
     public void Fire1(float distance)
 	{
-
-	}
+        Debug.Log("Fire1");
+    }
 
     public void Fire2(float distance)
     {
-
+        Debug.Log("Fire2");
     }
 
     void OnGUI()
@@ -111,9 +112,9 @@ public class HighlightObject : MonoBehaviour
         float y = Event.current.mousePosition.y - 10;
         //Debug.Log(SMGlobalConfiguration.instance.mouseCursor.transform.position.y + " - " + Event.current.mousePosition.y);
         if (outlined)
-            DrawOutline(new Rect(x - 149, y - 20, 300, 60), labelToDisplay, style, outlineColor, labelColor);
+            DrawOutline(new Rect(x - labelDelta.x, y - labelDelta.y, 300, 60), labelToDisplay, style, outlineColor, labelColor);
         else
-            GUI.Label(new Rect(x - 149, y - 20, 300, 60), labelToDisplay, style);
+            GUI.Label(new Rect(x - labelDelta.x, y - labelDelta.y, 300, 60), labelToDisplay, style);
     }
 
     //draw text of a specified color, with a specified outline color

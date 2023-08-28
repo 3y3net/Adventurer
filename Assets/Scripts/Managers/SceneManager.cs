@@ -49,7 +49,8 @@ public class SceneManager : MonoBehaviour
 
 	private void Start()
 	{
-        HideCursor();
+        if (Application.isPlaying)
+            HideCursor();
 	}
 
 	private void Update()
@@ -67,6 +68,20 @@ public class SceneManager : MonoBehaviour
             }
 		}
 
+    }
+
+    public void SetGameMode(GameMode mode)
+    {
+        gameMode = mode;
+        switch (gameMode)
+        {
+            case GameMode.Locomotion:
+                HideCursor();
+                break;
+            case GameMode.ZoomArea:
+                ShowCursor();
+                break;
+        }
     }
 
     public void ShowCursor()
