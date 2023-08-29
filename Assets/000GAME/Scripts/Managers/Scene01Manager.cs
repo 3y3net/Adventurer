@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
-public class Scene01Manager : MonoBehaviour {
+public class Scene01Manager : SceneManager {
 
     /*
     public GameObject vCam, cardBoxClosed, cardBoxOpened, exitCollider;

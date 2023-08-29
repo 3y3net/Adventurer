@@ -1,0 +1,76 @@
+#
+# SCENE 01 1000-1999
+#
+>1000 They have knocked on the door ... I do not wait for anyone. I'll go see who it is ...
+>1001 POSTMAN: Hello, good morning. I have a package for Julia Dumont
+>1002 JULIA: Yes, I'm Julia
+>1003 POSTMAN: Okay, can you sign here, please?
+>1004 JULIA: Of course
+>1005 POSTMAN: Here you are, goodbye. Have a nice day
+>1006 JULIA: Same to you, thanks a lot
+>1007 Uhm! A package from Professor Assad, from the Cairo Museum. What did he send me this time?
+>1008 The head of the Visigoth King Eladio the Brief. Unfortunately it is a fake ... and pretty bad by the way. Bad news for the owner
+>1009 Medieval scrolls about the creation of the world and the four elements. In their day they were considered heresy ...
+>1010 My laptop. I've all my work stored here. I'm sure I'll need it later
+>1011 A job from the Mildford auction house. Date these maps and find the location they describe
+>1012 A powerful flashlight. You never know when you're going to need it
+>1013 I need graphic documents of all my research. This reflex camera is my great ally
+>1014 Reference books of pre-Columbian America. I have to order this when I have time...
+>1015 A magnificent reproduction of the lid of the sarcophagus of Amenophis III. Professor Assad gave it to me and I keep it with great affection
+>1016 A complete reference to the pharaohs and high officials of ancient Egypt. Middle and new empire ... it had cost a small fortune
+>1017 Some day I'll have to order all this ...
+>1018 Reference material on the Middle Ages
+>1019 Here I keep everything about renaissance and modern age
+>1020 These old maps point to areas that do not appear on Google Maps. They have been very useful to me ... and they will continue to be
+>1021 It is alabaster, but its sobriety helps me in my meditation moments
+>1022 My work desk is messy as always
+>1023 Assad's package. I will need something sharp to open it, where will my tiny knife be?
+>1024 Perfect, now I can look inside
+>1025 This desktop is perfect for navigate the internet. I also have nice views
+>1026 I've already checked Assad's box
+>1027 My cup of Nefertiti, a souvenir of the congress of Egyptologists
+>1028 Finally I'v found my tiny knife, nice!
+>1029 My desk, this is where I feel most comfortable
+>1030 This tablet allows me to be connected and save all my progress anywhere. I will pick it up
+>1031 An old papyri. I have to check their authenticity, it looks very good
+>1032 Professor Assad asks me for help to check the authenticity on a couple of objets he found in the Museum
+>1033 It looks like a chest for viscera. I will have to look in my Egyptian art books to what period it belongs
+>1034 I still have things to inspect
+>1035 Let's see what Professor Assad has sent me
+>1036 This codex has been in my family for generations
+>1037 What memories, they were hard years but finishing first of my promotion helped me to make my dream of working with antiques come true
+>1038 I must look in my books to which pharaoh corresponds the cartridge
+>1039 The cartridge of a pharaoh. This is a good clue
+>1040 Compendium of five volumes of oriental art and culture
+>1041 Interesting, it contains a cartridge with the name of a pharaoh. I have to check that data in my books
+>1042 Art in the Egyptian empire
+>1043 Art references of ancient Mesopotamia
+>1044 Architecture in Minoan Greece
+>1045 Architecture of the palaces of Egypt, from Narmer to Cleopatra
+>1046 Decoration of the tombs and burials of ancient Egypt
+>1047 The complex Egyptian religion was closely related to art
+>1048 Evolution of canopy jars throughout the dynasties of ancient Egypt
+>1049 Let's see if I can locate the period of the canopic chest that Assad sent...
+>1050 This is not the kind of canopic jar I'm looking for...
+>1051 I found it! A canopic chest of the Old Kingdom
+>1052 Historical recopilation of Pre-Columbian America civilizations
+>1053 I should not leave until I complete the tasks that I have left
+>1054 Since joining a pottery course, my mother has given me these sculptures for my birthday during the last three years ... bigger and bigger. It scares me to think about this year's hand
+>1055 A genuine papyrus from the time of Akenaton. I must translate what is missing. I need to find my hieratic dictionary
+>1056 A scale reproduction of the pylon of the Karnak temple
+>1057 I've no time for distractions. I have work in progress
+>1058 Fake Sestertius, they have no value but they are a bargain because the vending machines confuse them with Euros
+>1059 I keep in this chest all my dictionaries of dead languages. Very useful to translate old texts, but a few days ago I lost the key. I will continue with the assignment of Assad to see if I remember where I left it
+>1060 Oh, I remember! The last time I opened the trunk was on Tuesday to take the Etruscan dictionary. I used it while watching my favorite show on TV
+>1061 Perfect! now I can look inside
+>1062 This is not the pharaoh I'm looking for
+>1063 I found it! Intef I, first intermediate period, XI dynasty
+>1064 Some hieratic papyri ... they look like from the new Egyptian empire. I have to check their authenticity, they look very good
+>1065 I keep in this chest all my dictionaries of dead languages. Very useful to translate old texts, but a few days ago I lost the key
+>1066 Here is the key, under the sesterces. That's why I did not find it
+>1067 This is not the dictionary I'm looking for
+>1068 Yes, I found my hieratic dictionary! now I can translate the papyruses
+>1069 I, Senenmut, son of Menjaf and Neferu, write these words in honor of my father. His name was stained for being the architect of Akenaton, the heretical pharaoh in the sacred city of Amarna. At the death of the monarch the priestly caste hurried to bury in oblivion and derision all that surrounded him, including my father. In that sad time, my youth led me to renounce my blood and not even speak to him in his last breath, something I deeply regret.
+ 
+My father taught me his trade and eventually I became one of the best tomb architects in the capital, known both by wealthy nobles and by the most despicable gangs of looters. These two circumstances, being my father's son and my wisdom as an architect, have led me to be the protagonist of a story that has put my life and that of my family in danger and that I want to relate in this book.
+>1070 I must find my hieratic dictionary. I know he's here

@@ -1,0 +1,18 @@
+#
+#
+# INVENTARIO (50000-51999)
+# 50000 - 50999 INVENTARIO ITEMS
+# 51000 - 51999 INVENTARIO DESCRIPTIONS
+#
+#
+#
+# INVENTARIO
+#
+>50000 Assad's letter
+>51000 Professor Assad, from the Cairo Museum, asks me to check the authenticity of a couple objects that have been found in a forgotten and unregistered lot. Assad is an eminence in Egyptology and also a great friend. He highly appreciates my help in cases that are of his special interest.
+>50001 Papyri in Hieartic
+>51001 Several papyri written in hieratic. The hieratic was used by scribes to write quickly.  I must inspect them to check what time they are and try to find something that reveals if they are false
+>50002 Chest
+>51002 This chest collects the organs of the dead. These recipients evolves a lot along the egyptian history. I have to check what period is in my art books
+>50003 Little Knife
+>51003 This little knife I use for almost anything, from opening letters to screwdrivers. It is always good to have it close

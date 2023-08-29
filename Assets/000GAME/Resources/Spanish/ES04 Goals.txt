@@ -1,0 +1,40 @@
+# 60000 - 60999 GOALS TITLE
+# 61000 - 61999 GOALS DESCRIPTIONS
+# 62000 - 62999 DONE DESCRIPTIONS
+# 63000 - 63999 CONCLUSION DESCRIPTIONS
+# 70000 - 79999 CLUES
+#
+#
+# ABRIR PAQUETE ASSAD
+>60000 Inspeccionar caja de Assad
+>61000 Has recibido un paquete del professor Assad de la Universidad de El Cairo. Abrelo e inspecciona su contenido.
+>62000 Has abierto la caja y cogido todo su contenido.
+>70000 Necesitas algo afilado para abrir la caja
+>70001 Con el cuchillo puedes abrir la caja
+#
+#
+#  COMPROBAR VASO CANOPO
+>60001 Comprobar la vasija
+>61001 Comprobar la autenticidad de la vasija que envió Assad. Parece un cofre canopo con inscripciones.
+>62001 La vasija es falsa. Las inscripciones no corresponden con el estilo, es una imitación.
+>63001 Conclusión <size=20><color=#00FF00>➜</color></size> La vasija es falsa
+>70002 Hay un cartucho con el nombre de un faraón
+>70003 El faraón es Intef I, periodo intermedio
+>70004 El estilo pertenece al Imperio Antiguo
+#
+#
+#GOAL COMPROBAR PAPIROS
+>60002 Comprobar los papiros
+>61002 Comprobar la autenticidad de los papiros. Están en hierático, no es mi especialidad pero debería tratar de traducirlos.
+>62002 Son auténticos. La textura del material y lo poco que he podido traducir indican que son auténticos.
+>70005 He logrado traducir "Ciudad sagrada" y "Akenaton"
+>70006 El material del papiro parece genuíno
+#
+#
+#GOAL TRADUCIR PAPIROS
+>60003 Traducir los papiros
+>61003 Debo buscar mi diccionario de hierático y traducir todo el texto que pueda.
+>62003 Cuentan una historia fascinante sobre uno de los periodos más oscuros de Egipto. Es una gran hallazgo.
+>70007 Encontrar diccionario de hierático
+>70008 Diccionario de hierático encontrado
+>70009 Símbolos interpretados

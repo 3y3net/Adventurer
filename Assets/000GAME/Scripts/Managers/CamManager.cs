@@ -5,7 +5,9 @@ using UnityEngine;
 public class CamManager : MonoBehaviour {
 
     //Nested vCams opened
-    public List<GameObject> currentVCam = new List<GameObject>();
+    public Camera currentCam;
+    public List<GameObject> zoomPositionList = new List<GameObject>();
+    public float zoomSpeed = 10;
     public bool LockWhenZoom = true;
     public bool CamZoomed = false;
     public GameObject BackButton;
@@ -20,7 +22,7 @@ public class CamManager : MonoBehaviour {
 
     public GameObject dummyVcam;
 
-    GameState gameState;
+    GameState gameState;    
 
     void Start()
     {
@@ -46,13 +48,12 @@ public class CamManager : MonoBehaviour {
 
     public void BackClicked()
     {
-        Debug.Log("BackClicked");
         backClicked = true;
     }
 
     public void AddvCam(GameObject vCam, ExitCam callBack, CanExit check)
     {
-        currentVCam.Add(vCam);
+        zoomPositionList.Add(vCam);
         vCam.SetActive(true);
         CamZoomed = true;
         CallBack.Add(callBack);
@@ -62,8 +63,15 @@ public class CamManager : MonoBehaviour {
     // Update is called once per frame
     private void Update()
     {
-        if (currentVCam.Count > 0)
+        if (zoomPositionList.Count > 0)
         {
+            //OJO HAY QUE CAMBIAR ESTO
+            
+            SceneManager.instance.SetGameMode(SceneManager.GameMode.ZoomArea);
+            int index = zoomPositionList.Count - 1;
+            currentCam.transform.rotation = Quaternion.Slerp(currentCam.transform.rotation, zoomPositionList[index].transform.rotation, Time.deltaTime * zoomSpeed);
+            currentCam.transform.position = Vector3.Slerp(currentCam.transform.position, zoomPositionList[index].transform.position, Time.deltaTime * zoomSpeed);
+
             if (gameState != null && gameState.gameStates[(int)GameStates.HasTablet])
                 DD_GameManager.GameUIManager.instance.HideTabletIcon();
     
@@ -71,32 +79,34 @@ public class CamManager : MonoBehaviour {
                 BackButton.SetActive(true);
             if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space) || backClicked)
             {
-                backClicked = false;
-                int index = currentVCam.Count - 1;
+                backClicked = false;                
 
                 if (ExitCheck[index] != null)
                     if (!ExitCheck[index]())
                         return;
 
-                GameObject go = currentVCam[index];
-                currentVCam.RemoveAt(index);
+                GameObject go = zoomPositionList[index];
+                zoomPositionList.RemoveAt(index);
                 go.SetActive(false);
                 if (CallBack[index] != null)
                     CallBack[index]();
-                if (currentVCam.Count == 0)
+                if (zoomPositionList.Count == 0)
                     CamZoomed = false;
                 CallBack.RemoveAt(index);
                 ExitCheck.RemoveAt(index);
             }
         }
-        if (currentVCam.Count == 0 && BackButton != null && BackButton.activeSelf)
+        else
+            SceneManager.instance.SetGameMode(SceneManager.GameMode.Locomotion);
+
+        if (zoomPositionList.Count == 0 && BackButton != null && BackButton.activeSelf)
         {
             BackButton.SetActive(false);
         }
 
         if (gameState != null && gameState.gameStates[(int)GameStates.HasTablet] && !gameState.gameStates[(int)GameStates.TableVisible])
             DD_GameManager.GameUIManager.instance.HideTabletIcon();
-        if (currentVCam.Count == 0 && gameState != null && gameState.gameStates[(int)GameStates.HasTablet] && gameState.gameStates[(int)GameStates.TableVisible])
+        if (zoomPositionList.Count == 0 && gameState != null && gameState.gameStates[(int)GameStates.HasTablet] && gameState.gameStates[(int)GameStates.TableVisible])
             DD_GameManager.GameUIManager.instance.ShowTabletIcon();
     }
 }

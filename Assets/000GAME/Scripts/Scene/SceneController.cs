@@ -54,7 +54,7 @@ public class SceneController : MonoBehaviour
         }
 
         startingSceneName = gs.gameStrings[(int)GameStrings.StartingScene];
-        fadeText.text= "Montpelier, Francia en la actualidad ";
+        fadeText.text = LocalizableData.instance.languageText[gs.gameValues[(int)GameValues.StartingTextIndex]];
 
         // Set the initial alpha to start off with a black screen.
         faderCanvasGroup.alpha = 1f;

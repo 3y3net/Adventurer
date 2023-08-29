@@ -1,0 +1,20 @@
+﻿# MENUS E INTROS 0-999
+>1 Montpelier, France
+<size=40>at present</size>
+>2 Professor Assad assignment
+>20 Inventory
+>21 Save
+>22 Maps
+>23 Game Log
+>24 Back
+>25 Close
+>26 Inventory Items
+>27 Item Derscription
+>28 Inspect
+>29 Clue not discovered
+>30 Goals
+>31 To Do
+>32 Done
+>33 of total
+>34 To change the page click and drag the corner of the sheet
+>35 Continue...

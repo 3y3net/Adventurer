@@ -1,0 +1,80 @@
+#
+# ESCENA 1
+#
+>1000 Han llamado a la puerta ... No espero a nadie. Iré a ver quién es ...
+>1001 CARTERO: Hola, buenos días. Traigo un paquete para Julia Dumont
+>1002 JULIA: Sí, soy yo
+>1003 CARTERO: Muy bien, ¿puede firmar aquí, por favor?
+>1004 JULIA: Por supuesto
+>1005 CARTERO: Aquí tiene, adios. Que tenga un buen día
+>1006 JULIA: Igualmente, muchas gracias
+>1007 ¡Vaya! Un paquete del profesor Assad, del Museo de El Cairo ¿Qué me habrá mandado esta vez?
+>1008 La cabeza del Rey visigodo Eladio el Breve. Lamentablemente es una falsificación... y bastante mala por cierto. Ya verás cuando se lo cuente al dueño.
+>1009 Escritos medievales sobre la creación del mundo y los cuatro elementos. En su día fueron considerados herejía...
+>1010 Mi portátil. Aquí tengo todo mi trabajo almacenado. Seguro que lo voy a necesitar más adelante
+>1011 Un encargo de la casa de subastas Mildford. Datar estos mapas y localizar la ubicación que describen
+>1012 Una linterna potente. Nunca sabes cuándo la vas a necesitar
+>1013 Necesito documentos gráficos de todas mis investigaciones. Esta cámra reflex es mi gran aliada
+>1014 Libros de consulta de la América precolombina. Tengo que ordenar esto cuando tenga tiempo...
+>1015 Una magnífica reproducción de la tapa del sarcófago de Amenophis III. Me la regaló el profesor Assad y la guardo con gran cariño
+>1016 Una completa referencia a los faraones y altos funcionarios del antiguo Egipto. Imperio medio y nuevo... me costó una pequeña fortuna
+>1017 Algún día tendré que ordenar todo esto...
+>1018 Material de consulta sobre la Edad Media
+>1019 Aquí guardo todo lo referente a renacimiento y edad moderna
+>1020 Estos mapas antiguos señalan zonas que no aparecenb ni el Google Maps. Me han sido muy últiles... y lo seguirán siendo
+>1021 Es alabastro, pero su sobriedad me ayuda en mis momentos de meditación
+>1022 Mi mesa de trabajo, está desordenada como siempre
+>1023 El envío de Assad. Necesitaré algo afilado para abrirlo, ¿dónde estará mi cuchillo pequeño?
+>1024 Perfecto, ahora podré mirar dentro
+>1025 Con este sobremesa vuelo por internet. Además tengo bonitas vistas
+>1026 Ya he revisado la caja de Assad
+>1027 Mi taza de Nefertiti, un recuerdo del congreso de egiptólogos
+>1028 Por fin encontré mi cuchillo pequeño, ¡genial!
+>1029 Mi escritorio, aquí es donde más cómoda me siento
+>1030 Esta tablet me permite estar conectada y guardar todo mi progreso en cualquier parte. La cogeré
+>1031 Unos papiros antiguos. Tengo que comprobar su autenticidad, tienen muy buena pinta
+>1032 El profesor Assad me pide ayuda para comprobar un par de objetos que han aparecido en su museo
+>1033 Parece un recipiente para vísceras. Tendré que mirar en mis libros de arte egipcio a que periodo pertenece
+>1034 Aun me quedan cosas por mirar
+>1035 Veamos que me ha mandado el profesor Assad
+>1036 Este códice ha estado en mi familia desde hace generaciones
+>1037 Que recuerdos, fueron años duros pero acabar primera de mi promoción me ayudó a hacer realidad mi sueño de trabajar con antigüedades
+>1038 Debo buscar en mis libros a qué faraón corresponde el cartucho
+>1039 El cartucho de un faraón. Esto es una pista sólida
+>1040 Compendio de cinco volúmenes de arte y cultura oriental
+>1041 Interesante, contiene un cartucho con el nombre de un faraón. Debo comprobar esos datos en mis libros
+>1042 Arte del antiguo Egipto
+>1043 Referencias de arte de la antigua Mesopotamia
+>1044 Arquitectura en la Grecia Minoica
+>1045 Arquitectura de los palacios de Egipto, desde Narmer hasta Cleopatra
+>1046 Decoración de las tumbas y enterramientos del antiguo Egipto
+>1047 La complejha religión egipcia estaba estrechamente relacionada con el arte
+>1048 Evolución de los vasos canopos a lo largo de las dinastías del antiguo Egipto
+>1049 A ver si puedo localizar a qué periodo pertenece el cofre canopo que mandó Assad...
+>1050 Este no es el tipo de vaso canopo que busco...
+>1051 ¡Lo encontré! Un vaso canopo del imperio antiguo
+>1052 Recoplación histórica de las civilizaciones de la América precolombina
+>1053 No debería irme hasta completar las tareas que me quedan
+>1054 Desde que se apuntó a un curso de alfarería, mi madre me ha regalado una de estas esculturas por mi cumpleaños durante los últimos tres años... cada vez más grandes. Me asusta pensar en la mano de este año
+>1055 Un papiro genuíno de la época de Akenaton. Debo traducir lo que falta. Necesito encontrar mi diccionario de hierático
+>1056 Una reproducción a escala del pilono del templo de Karnak
+>1057 Ahora no es momento para distracciones. Tengo trabajo entre manos
+>1058 Sestercios falsos, no tienen ningún valor pero son un chollo porque las máquinas expendedoras los confunden con Euros
+>1059 En este baul guardo todos mis diccionarios de lenguas muertas. Muy útiles para traducir textos antiguos, pero hace unos días que no encuentro la llave. Seguiré con el encargo de Assad a ver si recuerdo dónde la dejé
+>1060 ¡Ahora que recuerdo! la última vez que abrí el baul fue el martes para coger el diccionario etrusco. Lo usé mientras veía mi programa favorito en la TV
+>1061 ¡Perfecto! ahora puedo mirar dentro
+>1062 Ese no es el faraón que busco
+>1063 ¡Lo encontré! Intef I, primer periodo intermedio, XI dinastía
+>1064 Unos papiros en hierático... parecen del imperio nuevo egipcio. Tengo que comprobar su autenticidad, tienen muy buena pinta
+>1065 En este baul guardo todos mis diccionarios de lenguas muertas. Muy útiles para traducir textos antiguos, pero hace unos días que no encuentro la llave
+>1066 Aquí está la llave, debajo de los sestercios. Por eso no la encontraba
+>1067 Este no es el diccionario que busco
+>1068 ¡Bien, encontré mi diccionario de hierático! ahora podré traducir los papiros
+>1069 Yo, Senenmut, hijo de Menjaf y de Neferu, escribo estas palabras en honor a mi padre.
+ 
+Su nombre quedó manchado por ser el arquitecto de Akenaton, el faraón hereje en la ciudad sagrada de Amarna. A la muerte del monarca la casta sacerdotal se apresuró a enterrar en el olvido y el escarnio todo cuanto lo rodeaba, incluído mi padre.
+ 
+En esa triste época, mi juventud me llevó a renegar de mi sangre y no dirigirle la palabra ni siquiera en su último aliento, cosa de la que me arrepiento profundamente.
+>1070 Mi padre me enseñó su oficio y con el tiempo pasé a ser uno de los mejores arquitectos de tumbas en la capital, hecho conocido tanto por acaudalados nobles como por las más despreciables bandas de saqueadores.
+ 
+Estas dos circunstancias, ser hijo de mi padre y mi maestría como arquitecto me han llevado a ser protagonista de una historia que ha puesto mi vida y la de mi familia en peligro y que quiero relatar en este libro...

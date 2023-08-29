@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class InteractionObject : MonoBehaviour {
 
+    public enum Activation
+	{        
+        MouseOver,
+        PlayerEnter,
+        Both
+	}
+
+    public Activation activedWhen;
+
     public Transform interactionLocation;                   // The position and rotation the player should go to in order to interact with this Interactable.
 
     public GameConditionList[] conditonList;
@@ -12,9 +21,12 @@ public class InteractionObject : MonoBehaviour {
 
     public GameObject HighLightObject;
     public Color highLightColor = new Color(180f/255f, 180f / 255f, 180f / 255f,1);
+    public float flashDuration=0.5f;
 
-    HighlightingSystem.Highlighter hl;
+    public HighlightingSystem.Highlighter hl;
     public GameCursor gameCursor;
+
+    bool triggered = false;
 
     void Start()
     {
@@ -37,21 +49,68 @@ public class InteractionObject : MonoBehaviour {
             defaultReactionList.React();
     }
 
-    void OnMouseEnter()
+    void OnTriggerEnter(Collider other)
+    {
+        if (activedWhen == Activation.PlayerEnter || activedWhen == Activation.Both)
+        {
+            if (other.GetComponent<Collider>().tag == "Player" && SceneManager.instance.gameMode == SceneManager.GameMode.Locomotion)
+            {
+                hl.tween = true;
+                hl.tweenDuration = flashDuration;
+                if (triggered)
+                    return;
+                triggered = true;                
+            }
+        }    
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (activedWhen == Activation.PlayerEnter || activedWhen == Activation.Both)
+        {
+            if (other.GetComponent<Collider>().tag == "Player" && SceneManager.instance.gameMode == SceneManager.GameMode.Locomotion)
+            {                
+                triggered = false;
+                hl.tween = false;
+            }
+        }
+    }
+
+	private void Update()
+	{
+        if (triggered)
+        {
+            Collider col = GetComponent<Collider>();
+            if (col != null && col.enabled && Input.GetButtonDown("Action"))
+                Interact();
+            //hl.Hover(highLightColor);
+        }
+    }
+
+	void OnMouseEnter()
     {
 
     }
 
+    public void OnPointerClick(UnityEngine.EventSystems.PointerEventData ped)
+    {
+        Debug.Log("Clicked");
+    }
+
     private void OnMouseOver()
     {
-        if (hl.mode != HighlightingSystem.HighlighterMode.Disabled)
-        {        
+        if (activedWhen == Activation.MouseOver || activedWhen == Activation.Both)
+        {
+            hl.Hover(highLightColor);
             CursorManager.instance.SetCursor(gameCursor);
         }
     }
 
     private void OnMouseExit()
     {
-        CursorManager.instance.SetCursor(GameCursor.ModeNormal);
+        if (activedWhen == Activation.MouseOver || activedWhen == Activation.Both)
+        {            
+            CursorManager.instance.SetCursor(GameCursor.ModeNormal);
+        }
     }
 }

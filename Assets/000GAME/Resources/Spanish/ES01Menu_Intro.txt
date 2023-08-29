@@ -1,0 +1,26 @@
+﻿#
+### INDICE
+#
+# 0 - 999 MENUS E INTROS
+# 1000 - 1999 ESCENA 1000
+#
+# MENUS E INTROS
+>1 Montpelier, Francia
+<size=40>en la actualidad</size>
+>2 El Encargo del profesor Assad
+>20 Inventario
+>21 Grabar
+>22 Mapas
+>23 Notas del Juego
+>24 Volver
+>25 Cerrar
+>26 Objetos en Inventario
+>27 Derscription de Objeto
+>28 Inspeccionar
+>29 Pista por descubrir
+>30 Objetivos
+>31 Por hacer
+>32 Hechos
+>33 del total
+>34 Para pasar de página pulse y arrastre la esquina de la hoja
+>35 Continuar...

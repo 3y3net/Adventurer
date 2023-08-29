@@ -1,0 +1,16 @@
+#
+#
+# INVENTARIO (50000-51999)
+# 50000 - 50999 INVENTARIO ITEMS
+# 51000 - 51999 INVENTARIO DESCRIPTIONS
+#
+>50000 Carta de Assad
+>51000 El profesor Assad, de el Museo de El Cairo, me pide que compruebe la autenticidad de varios objetos que han encontrado en un lote olvidado y sin inventariar. Assad, además de una eminencia en egiptología, es un gran amigo. Me valora mucho y suele recurir a mi en casos que son de su especial interés.
+>50001 Papiro en Hierático
+>51001 Varios papiros escritos en hierático. El hierático lo usaban los escribas para escribir de forma rápida. Debo inspeccionarlos para comprobar de qué época son y tratar de encontrar algo que revele si son falsos
+>50002 Recipiente
+>51002 Este tipo de recipientes tenían la función de recoger los órganos del muerto. Evolucionaron mucho a lo largo del imperio egipcio. Tengo que comprobar de qué periodo es en mis libros de arte
+>50003 Pequeño Cuchillo
+>51003 Este pequeño cuchillo lo uso para casi cualquier cosa, desde abrir cartas hasta como destornillador. Siempre es bueno tenerlo a mano
+>50004 La llave de mi baul
+>51004 Al fin la he encontrado la llave de mi baul. Ahora podre abrirlo

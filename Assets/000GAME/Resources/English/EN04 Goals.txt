@@ -1,0 +1,40 @@
+# 60000 - 60999 GOALS TITLE
+# 61000 - 61999 GOALS DESCRIPTIONS
+# 62000 - 62999 DONE DESCRIPTIONS
+# 63000 - 63999 CONCLUSION DESCRIPTIONS
+# 70000 - 79999 CLUES
+#
+#
+# OPEN PACK ASSAD
+>60000 Inspect the Assad box
+>61000 You have received a package from Professor Assad of the University of Cairo. Open it and inspect its contents.
+>62000 You have opened the box and taken all its contents.
+>70000 You need something sharp to open the box
+>70001 With the knife you can open the box
+#
+#
+# CHECK CANOPO VASE
+> 60001 Check the jar
+> 61001 Check the authenticity of the jar that Assad sent. It looks like a canopic chest with inscriptions.
+> 62001 The jar is false. The inscriptions do not correspond with the style, it is an imitation.
+> 63001 Conclusion <size = 20> <color = # 00FF00> ➜ </ color> </ size> The jar is false
+> 70002 There is a cartridge with the name of a pharaoh
+> 70003 Pharaoh is Intef I, intermediate period
+> 70004 The style belongs to the Old Kingdom
+#
+#
+#GOAL CHECK PAPIROS
+> 60002 Check the papyri
+> 61002 Check the authenticity of the papyri. They are in hieratic, it is not my specialty but I should try to translate them.
+> 62002 They are authentic. The texture of the material and the little that I have been able to translate indicate that they are authentic.
+> 70005 I have been able to translate "Sacred City" and "Akenaton"
+> 70006 The material of the papyrus seems genuine
+#
+#
+#GOAL TRANSLATE PAPIROS
+>60003 Translate the papyri
+>61003 I must find my hieratic dictionary and translate all the information I can.
+>62003 They tell a fascinating story about one of the darkest periods in Egypt. It is a great find.
+>70007 Find hieratic dictionary
+>70008 Hieratic dictionary found
+>70009 Hieratic Symbols interpreted
