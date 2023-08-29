@@ -98,6 +98,7 @@ namespace DD_GameManager
 
         public void ShowHideInterface()
         {
+            Debug.Log("Clicked");
             if (Interface != null && !Interface.activeSelf)
                 ShowInterface();
             else if (Interface != null && Interface.activeSelf)

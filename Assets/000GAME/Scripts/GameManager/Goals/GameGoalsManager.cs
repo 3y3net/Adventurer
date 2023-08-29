@@ -42,7 +42,7 @@ namespace DD_GameManager
         public void SetText()
         {
             float total = 100.0f * (float)itemsDone.Count / (float)GameGoalsList.instance.gameGoals.Length;
-            mainTitle.text = LocalizableData.instance.languageText[30] + " (" + (int)total + "% " + LocalizableData.instance.languageText[33] + ")";
+            mainTitle.text = "aaa";
         }
 
         public void AddGoalToDo(int itemDBIndex)

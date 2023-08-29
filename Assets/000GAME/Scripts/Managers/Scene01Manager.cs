@@ -48,7 +48,8 @@ public class Scene01Manager : MonoBehaviour {
         if (!gameState.gameStates[(int)GameStates.Intro1Played])
         {
             gameState.gameStates[(int)GameStates.Intro1Played] = true;
-            timelineManager.PlayClip(0, FinishPlay);
+            //timelineManager.PlayClip(0, FinishPlay);
+            FinishPlay(0);
             sceneController.fadeText.text = "";
             gameState.gameValues[(int)GameValues.StartingTextIndex] = 2;            
         }

@@ -3,6 +3,8 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Events;
+
 
 // This script exists in the Persistent scene and manages the content
 // based scene's loading.  It works on a principle that the
@@ -12,6 +14,7 @@ using UnityEngine.UI;
 // the player leaves them.
 public class SceneController : MonoBehaviour
 {
+
     public event Action BeforeSceneUnload;          // Event delegate that is called just before a scene is unloaded.
     public event Action AfterSceneLoad;             // Event delegate that is called just after a scene is loaded.
 
@@ -51,7 +54,7 @@ public class SceneController : MonoBehaviour
         }
 
         startingSceneName = gs.gameStrings[(int)GameStrings.StartingScene];
-        fadeText.text= LocalizableData.instance.languageText[gs.gameValues[(int)GameValues.StartingTextIndex]];
+        fadeText.text= "Montpelier, Francia en la actualidad ";
 
         // Set the initial alpha to start off with a black screen.
         faderCanvasGroup.alpha = 1f;
