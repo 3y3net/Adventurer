@@ -20,8 +20,6 @@ public class PlayerMovement : MonoBehaviour
     private WaitForSeconds inputHoldWait;       // The WaitForSeconds used to make the user wait before input is handled again.
 	private Vector3 destinationRotation;
 
-    public TrackCamManager camManager=null;
-
 
     private readonly int hashSpeedPara = Animator.StringToHash("Speed");
                                                 // An hash representing the Speed animator parameter, this is used at runtime in place of a string.
@@ -283,9 +281,7 @@ public class PlayerMovement : MonoBehaviour
         // Set the destination of the nav mesh agent to the found destination position and start the nav mesh agent going.
         agent.SetDestination(destinationPosition);
         agent.isStopped = false;
-
-        if(camManager!=null)
-            camManager.OnGroundClick(destinationPosition.z, pData.position.y);
+        
     }
 
     // This function is called by the EventTrigger on an Interactable, the Interactable component is passed into it.

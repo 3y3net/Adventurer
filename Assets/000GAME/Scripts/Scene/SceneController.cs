@@ -19,8 +19,7 @@ public class SceneController : MonoBehaviour
     public event Action AfterSceneLoad;             // Event delegate that is called just after a scene is loaded.
 
     public string defaultInitialScene;
-    [TextArea]
-    public string defaultInitialText;
+    
     public CanvasGroup faderCanvasGroup;            // The CanvasGroup that controls the Image used for fading to black.
     public Text fadeText;
     public float fadeDuration = 1f;                 // How long it should take to fade to and from black.
@@ -54,7 +53,7 @@ public class SceneController : MonoBehaviour
         }
 
         startingSceneName = gs.gameStrings[(int)GameStrings.StartingScene];
-        fadeText.text = LocalizableData.instance.languageText[gs.gameValues[(int)GameValues.StartingTextIndex]];
+        fadeText.text = LocalizableData.instance.languageText[1];
 
         // Set the initial alpha to start off with a black screen.
         faderCanvasGroup.alpha = 1f;

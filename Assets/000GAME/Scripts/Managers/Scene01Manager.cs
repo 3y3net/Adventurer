@@ -19,9 +19,6 @@ public class Scene01Manager : SceneManager {
     public ReactionList FreshStartReactionList;
     public ReactionList LoadedStartReactionList;
 
-    [TextArea]
-    public string defaultInitialText;
-
     private GameState gameState;
     private SceneController sceneController;
     private TimeLineManager timelineManager;

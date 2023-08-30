@@ -65,8 +65,6 @@ public class CamManager : MonoBehaviour {
     {
         if (zoomPositionList.Count > 0)
         {
-            //OJO HAY QUE CAMBIAR ESTO
-            
             SceneManager.instance.SetGameMode(SceneManager.GameMode.ZoomArea);
             int index = zoomPositionList.Count - 1;
             currentCam.transform.rotation = Quaternion.Slerp(currentCam.transform.rotation, zoomPositionList[index].transform.rotation, Time.deltaTime * zoomSpeed);
@@ -95,13 +93,12 @@ public class CamManager : MonoBehaviour {
                 CallBack.RemoveAt(index);
                 ExitCheck.RemoveAt(index);
             }
-        }
-        else
-            SceneManager.instance.SetGameMode(SceneManager.GameMode.Locomotion);
+        }      
 
         if (zoomPositionList.Count == 0 && BackButton != null && BackButton.activeSelf)
         {
             BackButton.SetActive(false);
+            SceneManager.instance.SetGameMode(SceneManager.GameMode.Locomotion);
         }
 
         if (gameState != null && gameState.gameStates[(int)GameStates.HasTablet] && !gameState.gameStates[(int)GameStates.TableVisible])

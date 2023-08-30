@@ -91,11 +91,12 @@ public class InteractionObject : MonoBehaviour {
     {
 
     }
-
-    public void OnPointerClick(UnityEngine.EventSystems.PointerEventData ped)
+    
+    void OnMouseDown()
     {
-        Debug.Log("Clicked");
+        Interact();
     }
+    
 
     private void OnMouseOver()
     {

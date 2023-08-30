@@ -31,7 +31,8 @@ public class SceneManager : MonoBehaviour
         Locomotion,
         ZoomArea,
         Inspect,
-        Menu
+        Menu,
+        Tablet
 	}
 
     public enum GameCursor
@@ -58,7 +59,7 @@ public class SceneManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.T)) {
             if (gameMode == GameMode.Locomotion)
             {
-                gameMode = GameMode.ZoomArea;
+                gameMode = GameMode.Tablet;
                 ShowCursor();
             }
             else

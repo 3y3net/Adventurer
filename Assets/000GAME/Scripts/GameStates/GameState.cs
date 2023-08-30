@@ -34,7 +34,7 @@ public enum GameValues {
 
 public enum GameStrings
 {
-    StartingScene, StartingText
+    None, StartingScene, StartingText
 }
 
 public class GameState : PersistentData {

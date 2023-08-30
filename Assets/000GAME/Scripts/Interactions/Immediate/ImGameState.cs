@@ -10,9 +10,11 @@ public class ImGameState : ReactionBase
 
     public GameStates gameState;
     public bool stateCondition;
-    public GameValues gameValue;
-    Operation operation;
+    public GameValues gameValue;    
+    public Operation operation;
     public int value;
+    public GameStrings gameString;
+    public string strValue;
 
     GameState gs;
 
@@ -48,5 +50,8 @@ public class ImGameState : ReactionBase
                     break;
             }
         }
+
+        if (gameString != GameStrings.None)
+            gs.gameStrings[(int)gameString] = strValue;
     }
 }
