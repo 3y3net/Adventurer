@@ -7,6 +7,7 @@ namespace DD_GameManager
 {
     public class GameGoalsManager : GameUIApp
     {
+        public GameGoalsManager instance;
         public Text mainTitle;
         public GameObject ItemSlotToDo;
         public GameObject ItemSlotDone;
@@ -20,7 +21,12 @@ namespace DD_GameManager
         public string cluePending, clueDone, Conclusion;
         GameState gameState;
 
-        void Start()
+		private void Awake()
+		{
+            instance = this;
+        }
+
+		void Start()
         {
             gameState = FindObjectOfType<GameState>();
             if (!gameState)

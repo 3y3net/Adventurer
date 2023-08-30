@@ -26,6 +26,7 @@ public class Scene01Manager : SceneManager {
 
     void Start()
     {
+        Debug.Log("Starting "+gameObject.name);
         gameState = FindObjectOfType<GameState>();
         if (!gameState)
             throw new UnityException("GameState could not be found, ensure that it exists in the Persistent scene.");
@@ -40,10 +41,10 @@ public class Scene01Manager : SceneManager {
 
         goalsManager = FindObjectOfType<DD_GameManager.GameGoalsManager>();
         if (!goalsManager)
-            throw new UnityException("GameGoalsManager could not be found, ensure that it exists in the Persistent scene.");
+            throw new UnityException("GameGoalsManager could not be found, ensure that it exists in the Persistent scene.");        
 
         if (!gameState.gameStates[(int)GameStates.Intro1Played])
-        {
+        {            
             gameState.gameStates[(int)GameStates.Intro1Played] = true;
             //timelineManager.PlayClip(0, FinishPlay);
             FinishPlay(0);
@@ -51,7 +52,7 @@ public class Scene01Manager : SceneManager {
             gameState.gameValues[(int)GameValues.StartingTextIndex] = 2;            
         }
         else
-        {
+        {            
             LoadedStartReactionList.React();
             //vCam.SetActive(true);
             //cardBoxClosed.SetActive(true);

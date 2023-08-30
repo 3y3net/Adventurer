@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
 public class SceneManager : MonoBehaviour
 {
     private static SceneManager _instance = null;
@@ -61,11 +60,13 @@ public class SceneManager : MonoBehaviour
             {
                 gameMode = GameMode.Tablet;
                 ShowCursor();
+                DD_GameManager.GameUIManager.instance.ShowInterface();
             }
             else
             {
                 gameMode = GameMode.Locomotion;
                 HideCursor();
+                DD_GameManager.GameUIManager.instance.HideInterface();
             }
 		}
 

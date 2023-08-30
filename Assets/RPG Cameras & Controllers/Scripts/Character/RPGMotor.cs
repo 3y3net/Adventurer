@@ -650,6 +650,11 @@ namespace JohnStairs.RCC.Character {
             }
         }
 
+        public virtual void ForceCrouching()
+        {
+            _crouching = true;
+        }
+
         /// <summary>
         /// Toggles walking
         /// </summary>
@@ -658,6 +663,16 @@ namespace JohnStairs.RCC.Character {
             if (toggle && !_swimming) {
                 _walking = !_walking;
             }
+        }
+
+        public virtual void ForceWalking()
+        {
+                _walking = true;            
+        }
+
+        public virtual void ForceRunning()
+        {
+            _walking = false;
         }
 
         /// <summary>

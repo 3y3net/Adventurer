@@ -97,7 +97,7 @@ namespace JohnStairs.RCC.Character.MMO {
                     resultingSpeed *= BackwardsSpeedMultiplier;
                 }
                 #endregion Calculate the movement speed
-
+                
                 // Apply the resulting movement speed
                 _movementDirection *= resultingSpeed;
 

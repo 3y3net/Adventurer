@@ -15,12 +15,14 @@ public class DelAddGoal : DelayedReactionBase
 
     protected override void SpecificInit()
     {
+
         goalManager = GameObject.FindObjectOfType<DD_GameManager.GameGoalsManager>();
     }
 
 
     protected override void ImmediateReaction()
     {
+        Debug.Log("Called DelAddGoal" + gameObject.name); 
         goalManager.AddGoalToDo(goalDBIndex);
         if (Notification != null)
         {

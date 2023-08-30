@@ -6,7 +6,7 @@ using UnityEngine;
 public abstract class DelayedReactionBase : ReactionBase
 {
 
-    public float delay;             // All DelayedReactions need to have an time that they are delayed by.
+    public float delay;             // All DelayedReactions needs to have a time that they are delayed by.
 
 
     protected WaitForSeconds wait;  // Storing the wait created from the delay so it doesn't need to be created each time.
@@ -19,6 +19,7 @@ public abstract class DelayedReactionBase : ReactionBase
     // SpecificInit but with DelayedReactions, wait needs to be set too.
     public new void Init()
     {
+        Debug.Log("DelayedReactionBase" + gameObject.name);
         wait = new WaitForSeconds(delay);
 
         SpecificInit();
